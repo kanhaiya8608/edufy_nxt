@@ -1,10 +1,9 @@
-// db.js
 import mysql from 'mysql2/promise';
 
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  password: '', // Leave it empty if there is no password
+  password: '', 
   database: 'schools',
   waitForConnections: true,
   connectionLimit: 10,
