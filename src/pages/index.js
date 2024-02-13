@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div className="container mx-auto px-8 m-8">
       <nav className="mb-4">
-        <Link href="/admin" className="text-blue-500 hover:underline">
+        <Link href="/addSchool" className="text-blue-500 hover:underline">
           Go to Admin
         </Link>
       </nav>
