@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import PhotoUpload from '../components/PhotoUpload';
+import Head from 'next/head';
 const Admin = () => {
   const [newItem, setNewItem] = useState({
     name: '',
@@ -62,7 +63,7 @@ const Admin = () => {
           body: raw,
         };
   
-        await fetch("http://localhost:3000/api/deleteImage", requestOptions);
+        await fetch("/api/deleteImage", requestOptions);
       }
   
       await axios.delete(`/api/items/${itemId}`);
@@ -75,6 +76,7 @@ const Admin = () => {
 
   return (
     <div className="container mx-auto px-8 m-8">
+    <Head> <title>Add Schools</title> </Head>
       <h1 className="text-3xl font-bold mb-4">Admin Page</h1>
 
       <div className="mb-4">

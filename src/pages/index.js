@@ -1,7 +1,7 @@
-// pages/index.js
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -21,6 +21,9 @@ const Home = () => {
 
   return (
     <div className="container mx-auto px-8 m-8">
+       <Head>
+        <title>Schools</title> 
+      </Head>
       <nav className="mb-4">
         <Link href="/addSchool" className="text-blue-500 hover:underline">
           Go to Admin

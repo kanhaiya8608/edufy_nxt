@@ -1,4 +1,3 @@
-// components/PhotoUpload.js
 import { useState } from 'react';
 
 const PhotoUpload = ({ onUpload }) => {
