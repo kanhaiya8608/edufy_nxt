@@ -24,7 +24,7 @@ Before running the application, ensure that you have the following installed:
    ```
 3. **Set Up MySQL Database:**
 
- Create a new MySQL database using the provided schools.sql file.
+    Create a new MySQL database using the provided schools.sql file.
 
 4. **Update the db.js file in the project with your MySQL configuration:**
 
