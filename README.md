@@ -17,45 +17,37 @@ Before running the application, ensure that you have the following installed:
    git clone https://github.com/kanhaiya8608/edufy_nxt.git
    cd edufy_nxt
    ```
-
-2.  **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/kanhaiya8608/edufy_nxt.git
-   cd edufy_nxt
-   ```
-3. **Install Dependencies:**
+2. **Install Dependencies:**
 
    ```bash
    npm install
    ```
-4. **Set Up MySQL Database:**
+3. **Set Up MySQL Database:**
 
  Create a new MySQL database using the provided schools.sql file.
 
-5. Update the db.js file in the project with your MySQL configuration:
+4. **Update the db.js file in the project with your MySQL configuration:**
 
-```bash
-import mysql from 'mysql2/promise';
+      ```bash
+      import mysql from 'mysql2/promise';
+      const pool = mysql.createPool({
+      host: 'localhost',
+      user: 'your_mysql_username',
+      password: 'your_mysql_password',
+      database: 'schools',
+      waitForConnections: true,
+      connectionLimit: 10,
+      queueLimit: 0,
+      port: 3306
+      });
 
-const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'your_mysql_username',
-  password: 'your_mysql_password',
-  database: 'schools',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-  port: 3306
-});
+      export default pool;
+      ```
+5. **Run the Application:**
 
-export default pool;
-```
-6. Run the Application:
-
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 The application will be accessible at http://localhost:3000.
 
 ## Usage
