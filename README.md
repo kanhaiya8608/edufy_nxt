@@ -57,8 +57,8 @@ The application provides the following APIs:
 - POST /api/items: Add a new school.
 - DELETE /api/items/:id: Delete a school by ID.
 - POST /api/deleteImage: Delete an image associated with a school.
-Example:
 
+Example:
 - Retrieve all schools: GET http://localhost:3000/api/items
 - Add a new school: POST http://localhost:3000/api/items
 - Request Body: JSON data with school details
